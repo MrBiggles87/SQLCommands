@@ -1,0 +1,3 @@
+select name from products where pid = (select pid from sales group by pid having count(*) = (select max(count(*)) from sales group by pid));
+
+The above command line is an example of being able to retrieve data across 2 tables to pull out the most popular item (displayed by name)
