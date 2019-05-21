@@ -1,0 +1,3 @@
+select name from products where pid = (select pid from sales group by pid having count(*) = (select max(count(*)) from sales group by pid));
+
+Command for retrieving popular items over 2 tables
