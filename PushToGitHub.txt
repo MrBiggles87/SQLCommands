@@ -1,0 +1,13 @@
+How to add a file into Git via Oracle (example .txt):
+
+- Right click on desktop
+- Open terminal
+- create directory (mkdir ****) or change director (cd ****)
+- Once inside directory type:
+- nano ****.txt
+- Ctrl+X and Y to Save 
+- Git Add .
+- Git Commit -m "insert file description"
+- Git Push
+- Enter Username
+- Enter Password 
