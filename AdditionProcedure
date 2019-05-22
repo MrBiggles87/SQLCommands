@@ -1,0 +1,8 @@
+create or replace procedure addition2(A number, B Number, C Number)
+  2  Is
+  3  Result Number(3);
+  4  Begin
+  5  Result:=A+B+C;
+  6  DBMS_OUTPUT.PUT_LINE('Result is '||Result);
+  7  End;
+  8* /
