@@ -1,0 +1,13 @@
+create or replace procedure records(R Number, N Char, M Number, E Char, P Char)
+  2  Is
+  3  Begin
+  4  Insert into school values(R,N,M,E,P);
+  5  End;
+  6* /
+
+
+The above procedure enables you to insert directly into table (example: school)
+
+To process this command:
+
+call records(100,'John',99,'Test@Test.co.uk','SN25 1XT');
