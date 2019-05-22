@@ -1,0 +1,15 @@
+create or replace procedure addition
+  2  is
+  3  A number(3);
+  4  B number(3); (Variables between "Is" and "Begin"
+  5  C number(3);
+  6  Begin
+  7  A:=15;
+  8  B:=20;
+  9  C:=A+B;
+ 10  DBMS_OUTPUT.PUT_LINE('The Result:');
+ 11  DBMS_OUTPUT.PUT_LINE(C);
+ 12  End;
+ 13* /
+
+The process of creating a procedure to add to variables together
