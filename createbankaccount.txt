@@ -1,0 +1,10 @@
+create or replace procedure CreateBankAccount(Name char, Postcode char, AccType char, City Char)
+  2  is
+  3  begin
+  4  insert into NBS values (( select upper(substr(AccType,1,1))||upper(substr(City,1,1))||lpad(nvl(max(substr(accno,3,3))+1,1),3,'0') from NBS where substr(accno,1,1)=upper(substr(AccType,1,1))),Name,Postcode);
+  5  end;
+  6* /
+
+This is an example where we create a record and insert it into a previously created table (Bank2).
+
+The command line enables us to generate a new account number (+1).
