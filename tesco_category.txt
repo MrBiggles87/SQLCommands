@@ -1,0 +1,7 @@
+create or replace procedure tesco_category(category char)
+Is
+NewCID number(3);
+Begin
+Select NVL(Max(CID),0)+1 into newCID from category;
+insert into category values(NewCID, Category);
+End;
