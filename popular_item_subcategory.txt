@@ -1,0 +1,7 @@
+select description from subcategory where 
+  2  sid=(select SID from products 
+  3  where pid=(select pid from sales group by pid having count(*)=(select max(count(*)) 
+  4* from sales group by pid)));
+
+The above is an example of an alternate to 21/05/19 where we looked for the popular item.
+
