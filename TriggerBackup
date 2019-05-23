@@ -1,0 +1,9 @@
+create or replace trigger SchoolBackup
+before delete on school
+for each row
+begin
+insert into school_backup values(:old.regno,:old.name,:old.marks);
+end;
+/
+
+This is an example of a TRIGGER that INSERTS the old VALUES from the DELETED rows into a NEW TABLE
