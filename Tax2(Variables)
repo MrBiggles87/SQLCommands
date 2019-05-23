@@ -1,0 +1,14 @@
+create or replace function tax2(S Number)
+Return Number
+Is
+Result Number(7,2);
+Begin
+If S<=500 then Result:=0;
+End If;
+If S>500 and S<=1000 then Result:=S*15/100;
+End if;
+If S>1000 then Result:=S*21/100;
+End If;
+Return Result;
+End;
+/

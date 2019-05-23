@@ -1,0 +1,10 @@
+create or replace function DName(D Number)
+Return Char
+Is
+DName departments.department_name%type;
+Begin
+Select department_name into DName from departments
+Where department_id=D;
+Return DName;
+End;
+/
