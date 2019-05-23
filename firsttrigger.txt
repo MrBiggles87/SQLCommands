@@ -6,4 +6,4 @@ DBMS_OUTPUT.PUT_LINE('YOU HAVE DELETED A RECORD');
 End;
 /
 
-
+Insert "For Each Row" instead of "Declare" and it will display the message for EACH record deleted.
