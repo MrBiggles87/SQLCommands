@@ -1,0 +1,20 @@
+create or replace procedure CategoryEntry(Cat Char, Sub Char)
+is
+NewCID Number(3);
+NewSID Number(3);
+begin
+Select NVL(Max(CID),0) into NewCID
+From Category where Description=cat;
+
+If NewCID=0 then
+Select NVL(Max(CID),0)+1 into NewCID
+From Category;
+Insert into Category values(NewCID, Cat);
+End If;
+
+select NVL(Max(SID),0)+1 into NewSID
+From Subcategory;
+Insert into subcategory values(NewCID,NewSID,Sub);
+End;
+/
+
