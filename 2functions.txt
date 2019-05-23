@@ -1,0 +1,1 @@
+select first_name as "First Name", DName(Department_ID) as "Department Name", Tax2(Salary) as "Tax Bracket", salary-Tax2(salary) as "Net Salary" from employees;
