@@ -1,0 +1,9 @@
+create or replace trigger SchoolBackup2
+before delete on school2
+for each row
+begin
+insert into schoolbackup2 values(:old.regno,:old.name,:old.marks,user,sysdate);
+end;
+/
+
+The above is a TRIGGER for when the SCHOOL table information is DELETED, the SCHOOLBACKUP2 table will generate the USER and DATE OF DELETION.
