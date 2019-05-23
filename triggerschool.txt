@@ -1,0 +1,13 @@
+create trigger insert_trigger
+before insert on school2
+for each row
+begin
+if :new.marks=58 or :new.marks=59 then :new.marks:=60;
+end if;
+:new.name:=upper(:new.name);
+end;
+/
+
+Above is an example of a TRIGGER to execute a command where the new name is inserted in UPPERCASE and the mark is rounded up to 60
+
+
