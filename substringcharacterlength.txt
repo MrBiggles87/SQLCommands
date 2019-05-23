@@ -1,0 +1,4 @@
+select first_name as "First Name", substr(DName(Department_ID),1,15) as "Department Name", Tax2(Salary) as "Tax Bracket", salary-Tax2(salary) as "Net Salary" from employees;
+
+
+The above is an example of retrieving information and restricting the character limit with a sub string command
