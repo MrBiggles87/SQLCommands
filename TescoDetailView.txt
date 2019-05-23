@@ -1,0 +1,7 @@
+create view AsdaDetails as Select Product,
+(Price_sold-Price_Purchased)*QTY_Sold as Profit,
+(Price_sold-Price_Purchased)*QTY_Sold*21/100 as VAT,
+(Price_sold-Price_Purchased)*QTY_Sold-((Price_sold-Price_Purchased)*21/100) as "Net Profit"
+From Asda;
+
+The above is an example of CREATING A VIEW in which you have calculated the Profit, VAT and Profit MINUS VAT.
