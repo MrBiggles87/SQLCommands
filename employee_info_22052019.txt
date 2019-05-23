@@ -1,0 +1,13 @@
+create or replace procedure employee_info(empno number)
+is
+Fname char(20);
+Lname char(20);
+Sal number(5);
+begin
+select first_name, last_name, salary into Fname, Lname, Sal from employees
+where employee_id=empno;
+dbms_output.put_line(Fname);
+dbms_output.put_line(Lname);
+dbms_output.put_line(Sal);
+end;
+/
