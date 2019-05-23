@@ -1,0 +1,13 @@
+create or replace function tax(S Number)
+Return Number
+Is
+Result Number(7,2);
+Begin
+Result:=S*21/100;
+Return Result;
+End;
+/
+
+Below is an example of subtracting tax from the employee table
+
+select first_name,Salary,Tax(Salary) as "Tax",Salary-Tax(Salary) as "Total Salary" from employees;
