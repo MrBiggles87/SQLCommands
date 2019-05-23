@@ -12,8 +12,8 @@ From Category;
 Insert into Category values(NewCID, Cat);
 End If;
 
-select NVL(Max(SID),0)+1 into NewSID
-From Subcategory;
+select NVL(Max(SID),0)+10 into NewSID
+From Subcategory where cid=NewCID;
 Insert into subcategory values(NewCID,NewSID,Sub);
 End;
 /
