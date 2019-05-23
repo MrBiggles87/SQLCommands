@@ -1,0 +1,9 @@
+create or replace trigger delete_school
+after delete on school
+declare
+begin
+DBMS_OUTPUT.PUT_LINE('YOU HAVE DELETED A RECORD');
+End;
+/
+
+
